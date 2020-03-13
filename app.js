@@ -5,4 +5,6 @@ const getBoard = (height, width=height) =>
        .split("")
        .map(val => +val);
 
-const getSquare = (board, width, height) => (x, y) => board[y * width + x];
+const getSquare = (height, width=height, board=getBoard(height, width)) =>
+    (x, y) =>
+        board[y * width + x];
